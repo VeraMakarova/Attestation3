@@ -2,10 +2,14 @@ package ru.inno.attestation3;
 
 import com.codeborne.selenide.Browsers;
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.inno.attestation3.api.DemoqaClient;
+import ru.inno.attestation3.pagesAndElements.LoginPage;
+import ru.inno.attestation3.pagesAndElements.ProfilePage;
 
 import java.util.List;
 
@@ -20,6 +24,7 @@ public class Task3Test {
     @Test
     @DisplayName("Добавление 2 книг")
     @Description("Проверяем добавление 6 книг в коллекцию")
+    @Severity(SeverityLevel.CRITICAL)
     public void iCanAddBooks() {
         Configuration.browser = Browsers.CHROME;
         open();

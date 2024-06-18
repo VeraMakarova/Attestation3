@@ -1,4 +1,4 @@
-package ru.inno.attestation3;
+package ru.inno.attestation3.pagesAndElements;
 
 import ru.inno.attestation3.helper.ConfigHelper;
 

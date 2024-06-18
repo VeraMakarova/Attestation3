@@ -1,4 +1,4 @@
-package ru.inno.attestation3;
+package ru.inno.attestation3.pagesAndElements;
 
 import com.codeborne.selenide.ElementsCollection;
 
