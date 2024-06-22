@@ -4,8 +4,7 @@ import com.codeborne.selenide.ElementsCollection;
 
 import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ProfilePage {
 
@@ -14,7 +13,6 @@ public class ProfilePage {
     public LeftMenuElement getMenu() {
         this.menu = new LeftMenuElement();
         return menu;
-
     }
 
     public String checkEmptyTable() {
@@ -38,10 +36,10 @@ public class ProfilePage {
     public void deleteAllBooks() {
         $(".text-right.button.di [type=button]").scrollIntoView(true).shouldBe(visible).click();
         $("#closeSmallModal-ok").click();
+        switchTo().alert().accept();
     }
 
-    public void logOut(){
+    public void logOut() {
         $(".text-right.col-md-5.col-sm-12 #submit").click();
-
     }
 }

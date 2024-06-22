@@ -56,6 +56,6 @@ public class Task3Test {
         String textToBe = "No rows found";
         step("Проверить текст сообщения", () -> assertEquals(textToBe, emptyTableText));
         step("Проверить, что все строки таблицы пустые", () -> profilePage.checkFilledTable(0));
-        step("Разлогиниться", () ->profilePage.logOut());
+        step("Разлогиниться", () -> profilePage.logOut());
     }
 }

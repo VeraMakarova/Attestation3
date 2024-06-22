@@ -32,5 +32,4 @@ public class Task1Test {
         step("Проверить, что все строки таблицы пустые", () -> profilePage.checkFilledTable(0));
         step("Разлогиниться", () -> profilePage.logOut());
     }
-
 }

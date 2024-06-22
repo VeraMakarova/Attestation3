@@ -8,10 +8,10 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 public class DemoqaClient {
-    private String userId = ConfigHelper.getUserId();
-    public String URL = "https://demoqa.com/BookStore/v1/Books";
+   // private String userId = ConfigHelper.getUserId();
     private String userName = ConfigHelper.getUserName();
     private String password = ConfigHelper.getPassword();
+    String addBooksUrl = ConfigHelper.getURLAddBooks();
 
     public String getToken() {
         String creds = "{\"userName\": \"" + userName + "\",\"password\": \"" + password + "\"}";
@@ -49,7 +49,7 @@ public class DemoqaClient {
                 .body(body)
                 .contentType(ContentType.JSON)
                 .header("Authorization", "Bearer " + token)
-                .when().post(URL)
+                .when().post(addBooksUrl)
                 .then()
                 .statusCode(201);
     }
@@ -66,5 +66,4 @@ public class DemoqaClient {
             addBook(userId, token, isbn[i]);
         }
     }
-
 }

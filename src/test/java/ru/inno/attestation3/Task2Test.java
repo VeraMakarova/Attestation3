@@ -47,11 +47,10 @@ public class Task2Test {
         step("Ввести имя пользователя", () -> loginPage.setUserName());
         step("Ввести пароль", () -> loginPage.setPassword());
         step("Нажать кнопку Логин и перейти на страницу Профиль", () -> loginPage.logIn());
-
         step("Проверить, что на первой странице отображается 5 книг", () -> profilePage.checkFilledTable(5));
         step("Открыть следующую страницу списка книг", () -> profilePage.openNextPage());
         step("Проверить, что на второй странице отображается одна книга", () -> profilePage.checkFilledTable(1));
         step("Удалить все книги из корзины", () -> profilePage.deleteAllBooks());
-        step("Разлогиниться", () ->profilePage.logOut());
+        step("Разлогиниться", () -> profilePage.logOut());
     }
 }

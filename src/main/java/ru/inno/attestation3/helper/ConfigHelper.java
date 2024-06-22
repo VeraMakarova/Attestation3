@@ -30,14 +30,17 @@ public class ConfigHelper {
         String url = properties.getProperty("booksPageURL");
         return url;
     }
+
     public static String getProfilePageUrl() {
         String url = properties.getProperty("profilePageURL");
         return url;
     }
+
     public static String getUserName() {
         String userName = properties.getProperty("userName");
         return userName;
     }
+
     public static String getPassword() {
         String password = properties.getProperty("password");
         return password;
@@ -46,5 +49,10 @@ public class ConfigHelper {
     public static String getUserId() {
         String userId = properties.getProperty("userId");
         return userId;
+    }
+
+    public static String getURLAddBooks() {
+        String addBooksUrl = properties.getProperty("URL_ADD_BOOKS");
+        return addBooksUrl;
     }
 }
