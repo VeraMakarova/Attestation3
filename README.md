@@ -29,4 +29,3 @@
 	+ Нажать Delete All Books
 	+ Вернуться в раздел https://demoqa.com/profile
 	+ Проверить, что таблица пустая
-	
